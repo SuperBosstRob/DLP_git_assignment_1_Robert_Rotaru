@@ -1,20 +1,20 @@
-import numpy
+import numpy as np
 
 # Follow the tasks below to practice basic Python concepts.
 # Write your code in between the dashed lines.
 # Don't import additional packages. Numpy suffices.
 
-# Task 1: 
+# Task 1:
 # Instructions:
-#Write a function that takes one numeric argument as input. 
+#Write a function that takes one numeric argument as input.
 #If the number is larger than zero, the function should return 1, otherwise is should return -1.
 #The name of the function should be step
 
 # Your code here:
 # -----------------------------------------------
 
-def step
-
+def step(num):
+    return 1 if num > 0 else -1
 
 # -----------------------------------------------
 
@@ -28,8 +28,10 @@ def step
 
 # Your code here:
 # -----------------------------------------------
-def ReLu
-
+def ReLu(str, cutoff = 0):
+    return_array = np.array(str)
+    return_array[return_array < cutoff] = cutoff
+    return return_array
 
 # -----------------------------------------------
 
@@ -44,7 +46,9 @@ def ReLu
 # Your code here:
 # -----------------------------------------------
 
-def neural_net_layer
+def neural_net_layer(two_dim,one_dim):
+    multiplied = two_dim @ one_dim
+    return ReLu(multiplied)
 
 
 # ------------------------------------------
